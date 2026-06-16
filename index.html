@@ -1,290 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Vignesh Kumar S</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vignesh Kumar S — Platform & Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="logo">Vignesh Kumar</div>
-
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="logo">Vignesh Kumar S</div>
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#systems">Systems</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="/pdf/Vignesh S PE.pdf" class="nav-cta">Resume ↓</a>
 </nav>
 
-<section class="hero" id="about">
-
-    <div class="hero-text">
-        <h1>Hi, I'm <span>Vignesh Kumar</span></h1>
-
-        <h2>Platform Engineer | Software Engineer</h2>
-
-        <p>
-            Java Backend Developer specializing in
-            Cloud Networking, Security Automation,
-            Firewall Management and DevOps.
-        </p>
-
-        <div class="buttons">
-            <a href="resume.pdf" class="btn-primary">Resume</a>
-            <a href="#projects" class="btn-secondary">Projects</a>
-        </div>
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <p class="eyebrow">// platform &amp; backend engineering</p>
+    <h1>I make slow systems<br>boring and fast.</h1>
+    <p class="hero-sub">
+      Vignesh Kumar S — two years turning manual, hours-long infrastructure work at
+      <strong>Tata Communications</strong> into automated, sub-millisecond systems.
+      Sole developer on every platform below, end to end.
+    </p>
+    <div class="hero-actions">
+      <a href="#systems" class="btn-primary">See the systems</a>
+      <a href="mailto:vigneshkumar.s2507@gmail.com" class="btn-ghost">Say hello</a>
     </div>
+  </div>
 
-    <div class="hero-image">
-        <img src="images/svkimg.jpg" alt="Profile">
-    </div>
 
+  <div class="hero-right">
+
+  <div class="profile-circle">
+        <img src="images/profile.jpeg" alt="Vignesh Kumar">
+  </div>
+
+</div>
+</header>
+
+<section id="work">
+  <p class="eyebrow center">// Experience</p>
+  <h2 class="section-title">Tata Communications</h2>
+  <p class="section-sub">Chennai · Platform &amp; Backend Engineering · Jul 2024 – Present</p>
+
+  <div class="timeline">
+
+    <article class="timeline-item">
+      <div class="timeline-head">
+        <h3>Real-Time Capacity Reporting Platform</h3>
+        <span class="tag-row"><span>Spring Boot</span><span>RabbitMQ</span><span>Server-Sent Events</span><span>Angular</span></span>
+      </div>
+      <ul>
+        <li>Replaced a polling-based architecture with a push-based, event-driven model streaming live capacity data from <strong>100+ load balancers</strong> via Server-Sent Events — eliminated redundant requests, sub-second UI updates at scale.</li>
+        <li>Built a multi-threaded parallel processing layer fanning out API calls concurrently across regions, cutting aggregation latency from <strong>2 minutes to ~5ms</strong>. Earned internal recognition for design and measurable impact.</li>
+      </ul>
+    </article>
+
+    <article class="timeline-item">
+      <div class="timeline-head">
+        <h3>Zero-Touch Load Balancer Provisioning Platform</h3>
+        <span class="tag-row"><span>Spring Boot</span><span>Camunda BPMN</span><span>Ansible</span><span>OpenStack</span><span>Linux</span><span>Zabbix</span></span>
+      </div>
+      <ul>
+        <li>Designed a distributed workflow orchestration system launching VMs in parallel pairs via OpenStack and configuring HAProxy concurrently through Ansible — fully removed manual provisioning from the ops team's workload.</li>
+        <li>Implemented checkpoint-based state recovery with idempotent retry logic for transient failures, enabling self-healing execution and self-service onboarding through a cloud portal.</li>
+        <li>Configured HAProxy backends, frontends, and ACLs through the Data Plane REST API, with Keepalived VRRP active-passive failover for enterprise B2B high availability.</li>
+        <li>Owned the system end to end as sole developer — design, API contracts, and production deployment.</li>
+      </ul>
+    </article>
+
+    <article class="timeline-item">
+      <div class="timeline-head">
+        <h3>Fortinet Firewall &amp; Network Security Automation</h3>
+        <span class="tag-row"><span>Java</span><span>SSH</span><span>Python</span><span>OpenStack SDK</span></span>
+      </div>
+      <ul>
+        <li>Engineered a Java SSH-based provisioning engine for Fortinet constructs — inter-VLAN routing, static routes, firewall policy — optimizing per-operation latency from <strong>15s to 4ms</strong> via persistent VDOM session pooling and multiplexed channels.</li>
+        <li>Automated OpenStack security group provisioning, synchronizing rules with Fortinet policy through a Spring Boot orchestration layer across multi-tenant B2B environments.</li>
+      </ul>
+    </article>
+
+    <article class="timeline-item">
+      <div class="timeline-head">
+        <h3>OpenStack VM provisioning &amp; Automation </h3>
+        <span class="tag-row"><span>Spring Boot</span><span>Python</span><span>OpenStack SDK</span><span>RabbitMQ</span></span>
+      </div>
+      <ul>
+        <li>Designed and implemented end-to-end KVM VM provisioning workflows within a Spring Boot + Camunda BPMN orchestration 
+            system — built custom Python modules to manage VM lifecycle operations (create, resize, terminate) with full auditability, 
+            handling dynamic compute, network, and storage allocation via OpenStack Nova, Neutron, and Cinder APIs. 
+        </li>
+        <li>
+            Integrated RabbitMQ-based async messaging across the provisioning microservices pipeline — decoupled service 
+            communication from synchronous OpenStack API calls, enabling parallel workflow execution and reducing VM provisioning 
+            turnaround from several hours to under 10 minutes. 
+        </li>
+    </ul>
+    </article>
+
+    <article class="timeline-item intern">
+      <div class="timeline-head">
+        <h3>Platform Engineer Intern → converted to full-time</h3>
+        <span class="tag-row"><span>Cisco ACI</span><span>APIC REST</span><span>Camunda BPMN</span></span>
+        <span class="date-pill">Jan 2024 – Jul 2024</span>
+      </div>
+      <ul>
+        <li>Automated Cisco ACI/SDN provisioning — Tenant Profiles, Bridge Domains, EPGs, AAEP — cutting per-construct config time from hours to seconds.</li>
+        <li>Prototyped the SSH session pooling and VDOM multiplexing approach later productionized into the 99.97% latency reduction above.</li>
+      </ul>
+    </article>
+
+  </div>
 </section>
 
-<section id="skills">
+<section id="systems" class="systems-section">
+  <p class="eyebrow center">// how it's built</p>
+  <h2 class="section-title">Three systems, one pattern</h2>
+  <p class="section-sub">Replace synchronous, manual steps with async, idempotent, self-healing pipelines.</p>
 
-    <h2 class="section-title">Skills & Technologies</h2>
-
-    <div class="skills-wrapper">
-
-        <img src="images/java-2.png" alt="Java">
-        <img src="images/spring-boot.png" alt="Spring Boot">
-        <img src="images/angular.png" alt="Angular">
-        <img src="images/python.png" alt="Python">
-        <img src="images/linux3.png" alt="Linux">
-
-        <img src="images/mysql.png" alt="MySQL">
-        <img src="images/rabbitmq.png" alt="RabbitMQ">
-        <!-- <img src="images/fortinet.png" alt="Fortinet"> -->
-        <!-- <img src="images/aws.png" alt="AWS"> -->
-
-        <img src="images/OpenStack.png" alt="OpenStack">
-        <img src="images/Docker.png" alt="Docker">
-        <img src="images/terraform.png" alt="Terraform">
-        <img src="images/kafka2.png" alt="Kafka">
-
-        <img src="images/Git.png" alt="GitLab">
-        <img src="images/Prometheus.png" alt="Prometheus">
-        <img src="images/Grafana.png" alt="Grafana">
-
-        <!-- <img src="images/html.png" alt="HTML">
-        <img src="images/css.png" alt="CSS">
-        <img src="images/javascript.png" alt="JavaScript"> -->
-
+  <div class="systems-grid">
+    <div class="system-card">
+      <span class="system-num">01</span>
+      <h3>Decouple with messaging</h3>
+      <p>RabbitMQ pulls service communication off the synchronous path — OpenStack calls, HAProxy config, and capacity polling all run in parallel instead of blocking each other.</p>
     </div>
-
-</section>
-
-<section id="experience">
-
-<h2 class="section-title">
-Experience
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>
-Tata Communications | Platform Engineer
-</h3>
-
-<span>
-Jul 2024 - Present
-</span>
-
-<h5>Cloud Infrastructure Automation & High Availability</h5>
-<ul>
-        <li>Automated cloud infrastructure provisioning using OpenStack, Spring Boot, Camunda BPMN, Ansible, and RabbitMQ.</li>
-
-        <li>Developed real-time capacity monitoring dashboards using Angular, Spring Boot, SSE, and RabbitMQ.</li>
-
-        <li>Worked extensively on Linux, KVM, OpenStack, networking, and monitoring platforms.</li>
-
-        <li>Optimized Fortinet firewall operations from 15s to 4ms through SSH session pooling and workflow automation.</li>
-</ul>
-
-</div>
-
-
-<div class="timeline-item">
-
-<h3>
-Platform Engineer Intern
-</h3>
-
-<span>
-Jan 2024 - Jul 2024
-</span>
-
-<p>
-Automated Cisco ACI provisioning through
-Cisco APIC REST APIs and Camunda BPMN.
-</p>
-
-</div>
-
-</div>
-
+    <div class="system-card">
+      <span class="system-num">02</span>
+      <h3>Pool, don't reconnect</h3>
+      <p>Persistent VDOM sessions and multiplexed SSH channels turn the Fortinet engine's per-request connection overhead into a one-time cost — the source of the 15s → 4ms jump.</p>
+    </div>
+    <div class="system-card">
+      <span class="system-num">03</span>
+      <h3>Design for failure, not just success</h3>
+      <p>Checkpoint-based state recovery and idempotent retries mean the provisioning workflow heals itself on transient failure instead of needing a human to re-run it.</p>
+    </div>
+  </div>
 </section>
 
 <section id="projects">
+  <p class="eyebrow center">// personal project</p>
+  <h2 class="section-title">Healthcare Management System</h2>
+  <p class="section-sub">Java · Spring Boot · Spring Cloud · Kafka · Redis · PostgreSQL · Keycloak</p>
 
-<h2 class="section-title">
-Projects
-</h2>
-
-<div class="project-grid">
-
-<div class="project-card">
-
-<h3>
-Firewall Automation Platform
-</h3>
-
-<p>
-Vendor agnostic security automation
-platform supporting Fortinet and
-OpenStack Security Groups.
-</p>
-
-<div class="tags">
-<span>Java</span>
-<span>Spring Boot</span>
-<span>Fortinet</span>
-</div>
-
-<a href="YOUR_GITHUB_LINK">
-View Project →
-</a>
-
-</div>
-
-<div class="project-card">
-
-<h3>
-HAProxy Provisioning Platform
-</h3>
-
-<p>
-Automated load balancer deployment,
-VIP creation and Keepalived failover.
-</p>
-
-<div class="tags">
-<span>HAProxy</span>
-<span>Ansible</span>
-<span>OpenStack</span>
-</div>
-
-<a href="YOUR_GITHUB_LINK">
-View Project →
-</a>
-
-</div>
-
-<div class="project-card">
-
-<h3>
-Student Result Portal
-</h3>
-
-<p>
-Java backend application for student
-record and marks management.
-</p>
-
-<div class="tags">
-<span>Java</span>
-<span>MySQL</span>
-</div>
-
-<a href="https://github.com/Vignesh-Kumar-svk/Java-Backend-projects">
-View Project →
-</a>
-
-</div>
-
-</div>
-
+  <div class="project-feature">
+    <div class="project-body">
+      <p>
+        A production-grade microservices platform for patient and healthcare service
+        management, architected with the same fault-tolerance discipline as the
+        production systems above — not a tutorial clone.
+      </p>
+      <ul>
+        <li>API Gateway + Eureka service discovery, JWT/RBAC auth via Keycloak, Redis distributed locking to prevent concurrent double-booking.</li>
+        <li>Resilience4j circuit breaker, retry, rate limiter, and bulkhead isolation — validated under failure with JUnit 5, Mockito, and Testcontainers against real PostgreSQL and Kafka instances.</li>
+        <li>Maven multi-module workspace with shared <code>audit-core</code> and common libraries; Spring AOP centralizes audit logging and UUID propagation, cutting cross-cutting boilerplate by ~80%.</li>
+        <li>Multi-stage Docker builds with pinned base images and dumb-init process handling; Prometheus + Grafana for system health.</li>
+      </ul>
+      <a class="project-link" href="https://github.com/Vignesh-Kumar-svk/microservice-health-care" target="_blank" rel="noopener">View source on GitHub →</a>
+    </div>
+  </div>
 </section>
 
-<div class="stats">
+<!-- <section id="stack" class="stack-section">
+  <p class="eyebrow center">// toolbox</p>
+  <h2 class="section-title">Stack</h2>
 
-<div>
-<h2>99.97%</h2>
-<p>Latency Reduction</p>
-</div>
+  <div class="stack-grid">
+    <div class="stack-col">
+      <h3>Languages &amp; Frameworks</h3>
+      <p>Java · Spring Boot · Spring Cloud · Python · Angular · Resilience4j</p>
+    </div>
+    <div class="stack-col">
+      <h3>Data &amp; Messaging</h3>
+      <p>Kafka · RabbitMQ · Redis · MySQL · PostgreSQL</p>
+    </div>
+    <div class="stack-col">
+      <h3>Infrastructure &amp; Cloud</h3>
+      <p>OpenStack (Nova, Neutron, Cinder) · KVM · HAProxy · Docker · Terraform · AWS (EC2, S3, Lambda, IAM, SQS)</p>
+    </div>
+    <div class="stack-col">
+      <h3>Networking &amp; Observability</h3>
+      <p>Fortinet (FortiOS) · Cisco ACI/APIC · Camunda BPMN · Ansible · Zabbix · Prometheus · Grafana</p>
+    </div>
+  </div>
+</section> -->
 
-<div>
-<h2><10 min</h2>
-<p>VM Provisioning</p>
-</div>
 
-<div>
-<h2>2+</h2>
-<p>Years Experience</p>
-</div>
+<section id="stack" class="stack-section">
+  <p class="eyebrow center">// Technology Ecosystem</p>
+  <h2 class="section-title">Stack</h2>
 
-</div>
+  <div class="stack-icons-wrapper">
+
+    <!-- Engineering Stack -->
+    <div class="stack-card">
+      <h3>Engineering Stack</h3>
+
+      <div class="tech-grid">
+
+        <div class="logo-item">
+          <img src="images/java-2.png" alt="Java">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/spring-boot.png" alt="Spring Boot">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/python.png" alt="Python">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/angular.png" alt="Angular">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/linux3.png" alt="Linux">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/kafka2.png" alt="Kafka">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/rabbitmq.png" alt="RabbitMQ">
+        </div>
+
+
+        <div class="logo-item">
+          <img src="images/mysql.png" alt="MySQL">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/git.png" alt="Git">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/docker.png" alt="Docker">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/Ansible.png" alt="Ansible">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/terraform.png" alt="Terraform">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/openstack.png" alt="OpenStack">
+        </div>
+
+
+        <div class="logo-item">
+          <img src="images/prometheus.png" alt="Prometheus">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/grafana.png" alt="Grafana">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AWS Stack -->
+    <div class="stack-card">
+      <h3>AWS Services</h3>
+
+      <div class="tech-grid">
+
+        <div class="logo-item">
+          <img src="images/IAM.png" alt="IAM">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/EC2.png" alt="EC2">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/S3.png" alt="S3">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/Lambda.png" alt="Lambda">
+        </div>
+
+        <!-- <div class="logo-item">
+          <img src="images/aws/rds.png" alt="RDS">
+        </div> -->
+
+        <div class="logo-item">
+          <img src="images/ELB.png" alt="ELB">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/VPC.png" alt="VPC">
+        </div>
+
+        <div class="logo-item">
+          <img src="images/Route 53.png" alt="Route 53">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="achievements-section">
+
+  <p class="eyebrow center">// key achievements</p>
+  <h2 class="section-title">Production Impact</h2>
+
+  <div class="achievement-grid">
+
+    <div class="achievement-card">
+      <span class="achievement-value">15s → 4ms</span>
+      <h3>Fortinet Automation</h3>
+      <p>
+        Optimized firewall provisioning through persistent VDOM session pooling
+        and multiplexed SSH channels.
+      </p>
+      <span class="achievement-tag">99.97% Reduction</span>
+    </div>
+
+    <div class="achievement-card">
+      <span class="achievement-value">&lt;10 min</span>
+      <h3>VM Provisioning</h3>
+      <p>
+        Automated OpenStack VM deployment using RabbitMQ asynchronous workflows
+        and parallel orchestration.
+      </p>
+      <span class="achievement-tag">End-to-End Automation</span>
+    </div>
+
+    <div class="achievement-card">
+      <span class="achievement-value">100+</span>
+      <h3>Load Balancers</h3>
+      <p>
+        Built real-time capacity reporting platform with event-driven updates
+        across enterprise environments.
+      </p>
+      <span class="achievement-tag">Live Monitoring</span>
+    </div>
+
+  </div>
+
+</section>
 
 <section id="certifications">
 
-<h2 class="section-title">
-Certifications
-</h2>
+  <p class="eyebrow center">// learning & certifications</p>
+  <h2 class="section-title">Certifications</h2>
 
-<div class="cert-grid">
+  <div class="cert-grid">
 
-<div class="cert-card">
-    Linux Fundamentals
-</div>
+    <div class="cert-card">
 
-<div class="cert-card">
-    Ansible Basics
-</div>
+      
 
-<div class="cert-card">
-    AWS Developer Associate
-    (In Progress)
-</div>
+      <h3>AWS Educate Getting Started with Compute</h3>
 
-</div>
+      <img src="images/certifications/compute.png"
+           alt="AWS Certification">
+      <p>
+         EC2 instance types, auto-scaling, and load balancing for scalable compute.
+      </p>
 
-</section>
+      <a href="https://www.credly.com/badges/cf88fa79-2b62-4af4-b63b-deaa82817e9a/public_url"
+   target="_blank"
+   class="verify-btn">
 
-<section id="contact">
-
-    <h2 class="section-title">Get In Touch</h2>
-
-    <div class="contact">
-
-        <a href="mailto:vigneshkumaryes25@gmail.com">
-            Email
-        </a>
-
-        <a href="https://github.com/Vignesh-Kumar-svk">
-            GitHub
-        </a>
-
-        <a href="https://www.linkedin.com">
-            LinkedIn
-        </a>
+   Verify Credential 
+   <span>↗</span>
+</a>
 
     </div>
 
+    <div class="cert-card">
+
+        <h3>AWS Educate Getting Started with Security</h3>
+
+        <img src="images/certifications/aws-IAM.png"
+            alt="Linux">
+
+        <p>
+        IAM policies, roles, and best practices for secure cloud access control.
+        </p>
+
+        <a href="https://www.credly.com/badges/5db48d11-77e1-452c-aa63-a71a5d8ed77b/public_url"
+    target="_blank"
+    class="verify-btn">
+
+    Verify Credential 
+    <span>↗</span>
+
+    </div>
+
+    <div class="cert-card">
+
+    <h3>AWS Educate Getting Started with Storage</h3>
+
+      <img src="images/certifications/S3.png"
+           alt="S3">
+
+      <p>
+         S3 storage classes, lifecycle policies, and data management for scalable cloud storage.
+      </p>
+
+      <a href="https://www.credly.com/badges/cf88fa79-2b62-4af4-b63b-deaa82817e9a/public_url"
+   target="_blank"
+   class="verify-btn">
+
+   Verify Credential 
+   <span>↗</span>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact-section">
+  <p class="eyebrow center">// get in touch</p>
+  <h2 class="section-title">Let's talk</h2>
+  <p class="section-sub">Open to Platform Engineering and Software Engineering roles.</p>
+
+  <div class="contact-row">
+    <a href="mailto:vigneshkumar.s2507@gmail.com">Email</a>
+    <a href="https://github.com/Vignesh-Kumar-svk" target="_blank" rel="noopener">GitHub</a>
+    <a href="http://www.linkedin.com/in/vignesh-kumar-s-4b6080253" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
 </section>
 
 <footer>
-    © 2026 Vignesh Kumar
+  <span>© 2026 Vignesh Kumar S</span>
+  <!-- <span>Built with intent, not a template.</span> -->
 </footer>
 
 </body>
